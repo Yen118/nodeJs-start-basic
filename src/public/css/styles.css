@@ -1,3 +1,71 @@
-h1 {
-    color: red;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+  
+tr:hover {background-color: coral;}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+.create-user-container {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+}
+.createUserTopic {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 30px;
+}
+.submitButton {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.buttonCrud {
+  display: flex;
+}
+.update-user-container {
+  text-align: center;
+  margin-top: 200px;
+}
+.btn-save {
+  margin-top: 50px;
+  cursor: pointer;
 }

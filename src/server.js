@@ -1,21 +1,27 @@
 import express from 'express';
 import configViewEngine from './configs/viewEngine';
+import initWebRoute from './route/web';
+import initAPIRoute from './route/api';
+//import connection from './configs/connectDB';
 require ('dotenv').config();
 
 
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+
+//setup view engine
 configViewEngine(app);
 
-app.get('/', (req, res) => {
-    res.render('index.ejs')
-})
+//set up web route
+initWebRoute(app);
 
-app.get('/about', (req, res) => {
-    res.send(`I am Yen`)
-})
+// set up api route
+initAPIRoute(app);
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
